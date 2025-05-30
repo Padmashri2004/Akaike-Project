@@ -14,7 +14,7 @@ REGEX_PATTERNS = {
     "credit_debit_no": r"\b(?:\d[ -]*?){13,16}\b",
     "cvv_no": r"\b\d{3,4}\b",
     "expiry_no": r"\b(?:0?[1-9]|1[012])/?\d{2,4}\b",
-    "full_name": r"\b[A-Z][a-z]+\s[A-Z][a-z]+\b"
+    "full_name": r"\b[A-Z][a-z]+(?:\s[A-Z]\.?)*\s[A-Z](?:[a-z]+)?\b"
 }
 
 def pii_mask(text: str):
